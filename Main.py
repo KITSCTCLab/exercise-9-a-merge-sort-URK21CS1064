@@ -8,7 +8,7 @@ def merge_sort(data,size) -> None:
       if array[jindex] < array[small_index]:
         small_index = jindex
     array[small_index],array[index] = array[index], array[small_index]
-    return array
+    print(array)
 
 # Do not change the following code
 input_data = input()
@@ -19,4 +19,3 @@ for item in input_data.split(', '):
   elif item.lstrip("-").isnumeric():
     data.append(int(item))
 merge_sort(data,len(data))
-print(data)
