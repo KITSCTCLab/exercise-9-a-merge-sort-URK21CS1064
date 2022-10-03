@@ -8,6 +8,8 @@ def merge_sort(array):
                 small_index = jindex
         array[small_index],array[index] = array[index], array[small_index]
     print(array)
+    
+
 input_data = input()
 data = []
 for item in input_data.split(','):
