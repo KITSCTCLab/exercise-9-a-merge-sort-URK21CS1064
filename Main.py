@@ -1,7 +1,13 @@
 from typing import List
 
-def merge_sort(data) -> None:
+def merge_sort(data,size) -> None:
   # Write code here
+   for index in range(size):
+    small_index = index
+    for jindex in range(index+1, size):
+      if array[jindex] < array[small_index]:
+        small_index = jindex
+    array[small_index],array[index] = array[index], array[small_index]
 
 
 # Do not change the following code
@@ -12,5 +18,5 @@ for item in input_data.split(', '):
     data.append(int(item))
   elif item.lstrip("-").isnumeric():
     data.append(int(item))
-merge_sort(data)
+merge_sort(data,len(data))
 print(data)
